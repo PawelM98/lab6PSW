@@ -1,0 +1,78 @@
+header{
+    margin: 0px;
+    background-color: darkorange;
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+}
+
+.container{
+    margin: 0px 100px;
+}
+.postList{
+}
+
+#title1,#titleUpdate{
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+}
+#post1{
+    font-family: 'Source Serif Pro', serif;
+}
+#para1,#para2{
+    width: 10%;
+}
+#postAdd,#postUpdate{
+    height: 70px;
+    width: 70%;
+}
+#titleAdd{
+    width: 30%;
+}
+#logout{
+    color: white;
+    font-size: 20px;
+    font-family: 'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
+    margin: 2px 2px;
+    text-decoration: none;
+}
+input[type=text], select  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

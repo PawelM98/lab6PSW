@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Source+Serif+Pro&display=swap" rel="stylesheet">
+    <title>AMW BLOG</title>
+</head>
+<body>
+<header>
+    Polish Naval Academy BLOG <a id="logout" th:href="@{/logout}" style="float: right">Wyloguj</a>
+</header>
+<div class="container">
+<form th:action="@{/}" th:object="${newPost}" method="post" >
+    <p>Title: <input id="titleAdd" type="text" th:field="*{title}" placeholder="Title..."></p>
+    <p>Post: <input id="postAdd" type="text" th:field="*{post}" placeholder="Share your post here!"></p>
+    <input class="button" type="submit" value="Add Post">
+</form>
+
+<form>
+    <tr th:each="post: ${postList}">
+        <hr>
+        <td><h3 id="title1" th:text="${post.getTitle()}"></h3>
+        <a th:href="@{/editPost/{id}(id=${post.id})}" style="float: right">
+            <img src="https://cdn1.iconfinder.com/data/icons/your-needs-vol-5/16/pencil_pen_write_edit_delete-512.png" alt="Edit image" height="25px" width="25px"  >
+        </a>
+        <a th:href="@{/deletePost/{id}(id=${post.id})}" style="float: right">
+            <img src="https://cdn1.iconfinder.com/data/icons/editorial-1/512/Editorial-write-writing-pen-edit-10-512.png" alt="Delete image" height="30px" width="30px"  >
+        </a>
+        </td>
+        <td>
+        <p id="post1" th:text="${post.getPost()}"></p>
+        </td>
+        <br>
+    </tr>
+</form>
+</div>
+</body>
+</html>

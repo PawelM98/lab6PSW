@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Source+Serif+Pro&display=swap" rel="stylesheet">
+    <title>AMW BLOG</title>
+</head>
+<body>
+<header>
+    Polish Naval Academy BLOG <a id="logout" th:href="@{/logout}" style="float: right">Wyloguj</a>
+</header>
+<div class="container">
+<form th:action="@{/updatePost/{id}(id=${modifiedPost.id})}" th:object="${modifiedPost}" method="post" >
+    <p>Title: <input id="titleUpdate" type="text" th:field="*{title}"></p>
+    <p>Post: <input id="postUpdate" type="text" th:field="*{post}"></p>
+    <input class="button" type="submit" value="Modify Post">
+</form>
+</div>
+
+</body>
+</html>
