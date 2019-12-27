@@ -36,7 +36,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").hasAnyRole("ADMIN","USER")
                 .antMatchers("/editPost/{id}","/deletePost/{id}").hasRole("ADMIN")
                 .and()
-                .formLogin().permitAll();
+                .formLogin().permitAll()
+                .and()
+                .csrf().disable();
+
     }
 
     @Bean

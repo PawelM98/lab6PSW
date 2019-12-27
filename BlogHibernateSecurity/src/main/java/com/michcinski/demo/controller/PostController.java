@@ -53,5 +53,9 @@ public class PostController {
         postService.modifyPost(postService.getOne(id));
         return "redirect:/";
     }
+    @GetMapping("error")
+    public String errorBlog(){
+        return "errorPage";
+    }
 
 }
